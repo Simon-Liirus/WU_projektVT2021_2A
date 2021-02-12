@@ -3,3 +3,13 @@
     padding:0px;
     box-sizing:border-box;
 }
+#grid_wrapper{
+    grid-template-columns: 3fr 3fr 2fr 2fr;
+    grid-template-rows: 2fr 4fr 4fr 2fr;
+    grid-template-areas:
+    "he he he he"
+    "ma ma ar ar"
+    "ma ma ar ar"
+    "na na na na"
+    ;
+}
