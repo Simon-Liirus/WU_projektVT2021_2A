@@ -13,3 +13,18 @@
     "na na na na"
     ;
 }
+#title{
+    grid-area: he;
+
+}
+#main-bilder{
+    grid-area: ma;
+
+}
+#info{
+    grid-area: ar;
+    
+}
+#navigation{
+    grid-area: na;
+}
