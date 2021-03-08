@@ -2,8 +2,12 @@
     margin:0px;
     padding:0px;
     box-sizing:border-box;
+    background-image: URL("../img/startsidabakgrund.jpg")
 }
 #grid_wrapper{
+    display:grid;
+    width:100vw;
+    height:100vh;
     grid-template-columns: 3fr 3fr 2fr 2fr;
     grid-template-rows: 2fr 4fr 4fr 2fr;
     grid-template-areas:
@@ -15,16 +19,49 @@
 }
 #title{
     grid-area: he;
-
+    background-color: green ;
 }
 #main-bilder{
     grid-area: ma;
-
+    background-color: yellow ;
 }
 #info{
     grid-area: ar;
-    
+    background-color: pink ;
 }
 #navigation{
     grid-area: na;
+    background-color: cyan ;
+}
+@media screen and (max-width: 600px) {
+
+    #grid_wrapper{
+        display:grid;
+        width:100vw;
+        height:100vh;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows:1fr 1fr 7fr 1fr;
+        grid-template-areas:
+        "he he he"
+        "na na na"
+        ". ar ."
+        "fo fo fo";
+    }
+    #title{
+        grid-area: he;
+        background-color:aqua;
+    }
+    #navigation{
+        grid-area: na;
+        background-color: red;
+    }
+    #info{
+        grid-area: ar;
+        background-color: brown;
+        
+    }
+    #main-bilder{
+        grid-area: fo;
+        background-color: yellow;
+    }
 }
