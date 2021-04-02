@@ -2,9 +2,8 @@
     margin:0px;
     padding:0px;
     box-sizing:border-box;
-    background-image: URL("../img/startsidabakgrund.jpg")
 }
-#grid_wrapper{
+#grid_wrapper_main{
     display:grid;
     width:100vw;
     height:100vh;
@@ -16,6 +15,10 @@
     "ma ma ar ar"
     "na na na na"
     ;
+    background-image: URL("../img/startsidabakgrund.jpg");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position-y:50%;
 }
 #title{
     grid-area: he;
@@ -23,7 +26,7 @@
 }
 #main-bilder{
     grid-area: ma;
-    background-color: yellow ;
+    opacity: 0%;    
 }
 #info{
     grid-area: ar;
@@ -35,7 +38,7 @@
 }
 @media screen and (max-width: 600px) {
 
-    #grid_wrapper{
+    #grid_wrapper_main{
         display:grid;
         width:100vw;
         height:100vh;
@@ -43,9 +46,13 @@
         grid-template-rows:1fr 1fr 7fr 1fr;
         grid-template-areas:
         "he he he"
-        "na na na"
+        "ma ma ma"
         ". ar ."
-        "fo fo fo";
+        "na na na";
+        background-image: URL("../img/startsidabakgrund.jpg");
+    background-repeat: no-repeat;
+    background-size: 115%;
+    background-position-y:50%;
     }
     #title{
         grid-area: he;
@@ -61,7 +68,173 @@
         
     }
     #main-bilder{
-        grid-area: fo;
+        grid-area: ma;
         background-color: yellow;
     }
+}
+
+
+
+#grid_wrapper_produkter{
+    display:grid;
+    width:100vw;
+    height:100vh;
+    grid-template-columns:4fr 4fr 4fr;
+    grid-template-rows: 3fr 2fr 300px;
+    grid-template-areas:
+    "he he he"
+    "na na na"
+    "ma ma ma";
+    overflow-x:hidden;
+}
+#produkt_header{
+    display:flex;
+    grid-area:he;
+    background-color:green;
+    align-items:center;
+    justify-content:space-around;
+    flex-direction: column;
+    overflow-x:hidden;
+}
+#navigera_produkter{
+    display:flex;
+    grid-area:na;
+    background-color:orange;
+    align-items:center;
+    justify-content:space-around;
+    overflow-x:hidden;
+    
+}
+#main_produkt_grid_wrapper{
+    grid-area:ma;
+    display:grid;
+    width:100vw;
+    height:100vh;
+    grid-template-columns:1fr 1.5fr 1fr 1.5fr 1fr 1.5fr 1fr;
+    grid-template-rows: 1fr 1.5fr 1fr 1.5fr 1fr;
+    grid-template-areas:
+    ".. .. .. .. .. .. .."
+    ".. p1 .. p2 .. p3 .."
+    ".. .. .. .. .. .. .."
+    ".. p4 .. p5 .. p6 .."
+    ".. .. .. .. .. .. ..";
+    background-image: URL("../img/startsidabakgrund.jpg");
+    background-repeat:no-repeat;
+    background-size: 100%;
+    overflow-x:hidden;
+}
+#produkt_1{
+    grid-area: p1 ;
+    background-color:yellow;
+}
+#produkt_2{
+    grid-area: p2 ;
+    background-color:yellow;
+}
+#produkt_3{
+    grid-area: p3 ;
+    background-color:yellow;
+}
+#produkt_4{
+    grid-area: p4 ;
+    background-color:yellow;
+}
+#produkt_5{
+    grid-area: p5 ;
+    background-color:yellow;
+}
+#produkt_6{
+    grid-area: p6 ;
+    background-color:yellow;
+}
+@media screen and (max-width: 600px) {
+
+    #grid_wrapper_produkter{
+        display:grid;
+        width:100vw;
+        height:100vh;
+        grid-template-columns:4fr 4fr 4fr;
+        grid-template-rows: 3fr 2fr 600px;
+        grid-template-areas:
+        "he he he"
+        "na na na"
+        "ma ma ma";
+        overflow-x:hidden;
+    }
+    #produkt_header{
+        display:flex;
+        grid-area:he;
+        background-color:green;
+        align-items:center;
+        justify-content:space-around;
+        flex-direction: column;
+        overflow-x:hidden;
+    }
+    #produkt_header h1{
+        font-size:100%;
+    }
+    #produkt_header h3{
+        font-size:80%;
+    }
+    #navigera_produkter{
+        display:flex;
+        grid-area:na;
+        background-color:orange;
+        align-items:center;
+        justify-content:space-around;
+        overflow-x:hidden;
+        
+    }
+    #main_produkt_grid_wrapper{
+        grid-area:ma;
+        display:grid;
+        width:100vw;
+        height:100vh;
+        grid-template-columns:1fr 1.5fr 1fr;
+        grid-template-rows: 1fr 1.5fr 1fr 1.5fr 1fr 1.5fr 1fr 1.5fr 1fr 1.5fr 1fr 1.5fr 1fr;
+        grid-template-areas:
+        ".. .. .."
+        ".. p1 .."
+        ".. .. .."
+        ".. p2 .."
+        ".. .. .."
+        ".. p3 .."
+        ".. .. .."
+        ".. p4 .."
+        ".. .. .."
+        ".. p5 .."
+        ".. .. .."
+        ".. p6 .."
+        ".. .. ..";
+        background-image: URL("../img/startsidabakgrund.jpg");
+        background-repeat:no-repeat;
+        background-size: 100%;
+        overflow-x:hidden;
+    }
+    #produkt_1{
+        grid-area: p1 ;
+        background-color:yellow;
+    }
+    #produkt_2{
+        grid-area: p2 ;
+        background-color:yellow;
+    }
+    #produkt_3{
+        grid-area: p3 ;
+        background-color:yellow;
+    }
+    #produkt_4{
+        grid-area: p4 ;
+        background-color:yellow;
+    }
+    #produkt_5{
+        grid-area: p5 ;
+        background-color:yellow;
+    }
+    #produkt_6{
+        grid-area: p6 ;
+        background-color:yellow;
+    }
+
+
 }
