@@ -567,6 +567,7 @@
         "na"
         "ma"
         "as";
+        background-size:100vw 30vh;
     }
     #info_header{
         grid-area:he;
@@ -585,7 +586,7 @@
         grid-area:as;
         overflow:hidden;
         position:absolute;
-        bottom:-61.5%
+        bottom:-57.5%
     }
     #info_navigation{
         grid-area:na;
