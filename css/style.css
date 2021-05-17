@@ -2,6 +2,7 @@
     margin:0px;
     padding:0px;
     box-sizing:border-box;
+    color:white;
 }
 #grid_wrapper_main{
     display:grid;
@@ -22,12 +23,19 @@
 }
 #title{
     grid-area: he;
-    display:flex;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-rows:1fr;
+    grid-template-areas:
+    "h1";
     align-items: center;
     justify-content: space-around;
     font-size:200%;
+    background-color:green;
+    border:2px black solid;
 }
-#title p{
+#title h1{
+    grid-area:h1;
     border:2px solid black;
     background-color:darkolivegreen;
 }
@@ -381,7 +389,7 @@
     align-items: center;
     font-size:200%;
     background-image:URL("../img/Jungle-background.jpg");
-    border:5px solid black;
+    border:6px solid black;
 }
 .bokning_header h1{
     border:2px solid black;
