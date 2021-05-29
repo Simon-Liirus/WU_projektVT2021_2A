@@ -18,7 +18,7 @@
     "na na na na"
     ;
     background-image: URL("../img/startsidabakgrund.jpg");
-    background-repeat: no-repeat;
+    background-repeat:repeat;
     background-size: 100%;
     background-position-y:50%;
 }
@@ -81,9 +81,10 @@
         ". ar ."
         "na na na";
         background-image: URL("../img/startsidabakgrund.jpg");
-        background-repeat: no-repeat;
+        background-repeat: repeat;
         background-size: 150%;
         background-position-y:50%;
+        overflow:scroll;
     }
     #title{
         grid-area: he;
@@ -814,6 +815,9 @@
         border:solid 5px black;
         background-color:darkgreen;
         justify-content: space-around;
+    }
+    .nav-links a{
+        font-size:90%;
     }
 
 }
