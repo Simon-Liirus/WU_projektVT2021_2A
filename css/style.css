@@ -3,7 +3,7 @@
     padding:0px;
     box-sizing:border-box;
     color:white;
-    overflow-x:hidden;
+    overflow:hidden;
 }
 #grid_wrapper_main{
     display:grid;
@@ -138,6 +138,7 @@
     background-image:URL("../img/Jungle-background.jpg");
     background-size:100%;
     overflow-x:hidden;
+    overflow-y:scroll;
     
 }
 #produkt_header{
@@ -592,10 +593,6 @@
 }
 @media screen and (max-width: 600px){
 
-    *{
-        overflow:hidden;
-        
-    }
     #info_grid_wrapper{
         display:grid;
         width:100vw;
