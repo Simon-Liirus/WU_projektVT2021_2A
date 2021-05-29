@@ -2,33 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontka oss</title>
+    <title>Exempel hamburgermeny</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    
+    <nav class="bodi_nav_nav">
 
-    <div id="kontakt_grid_wrapper">
-<header id="kontakt_header">
-    <h1>Monkey Buissnes Zoo</h1> 
-    <b>Info om vilka tider du kan boka hittar du på våran boknings sida nedan. Alla våra samtal är inspelade för säkerhers själ, både för vårat företag och våra kunder. Om du är obekväm med det kan du kontakta oss på våran e-mail: Monkey.Buissness@Zoo.com</b>
-    </header>
-<main id="kontakt_main">
-    <ul id="kontakt_lista">
-        <li>073 696 13 37 - Kapten Krok</li>
-        <li>070 420 13 37 - Matros Matts</li>
-        <li>072 808 13 37 - Kryppskytts Konrad</li>
-    </ul>
-    
-</main>
-<nav id="kontakt_nav">
-    <a href="index.html">StartSida</a>
-    <a href="info.html">Info om oss</a>
-    <a href="bokning.html">Boka tid</a>
-    <a href="produkter.html">Våra produkter</a>
-</nav>
+        <ul class="nav-links">
+            <li><a href="index.html">Startsida</a></li>
+            <li><a href="produkter.html">produkter</a></li>
+            <li><a href="bokning.html">Boka Tid</a></li>
+            <li><a href="info.html">Info</a></li>
+        </ul>
+
+        <div class="burger" onclick="toggleMeny()">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+
+    </nav>
+
+    <div class="grid_wrapper">
+        <header class="huvud">
+            <h1>Money Buissness</h1>
+            <b>Info om vilka tider du kan boka hittar du på våran boknings sida nedan. Alla våra samtal är inspelade för säkerhers själ, både för vårat företag och våra kunder. Om du är obekväm med det kan du kontakta oss på våran e-mail: Monkey.Buissness@Zoo.com</b>
+        </header>
+        <main class="bild"></main>
+        <footer class="footer">   
+            <ul id="kontakt_lista">
+                <li>073 696 13 37 - Kapten Krok</li>
+                <li>070 420 13 37 - Matros Matts</li>
+                <li>072 808 13 37 - Kryppskytts Konrad</li>
+            </ul>
+        </footer>
     </div>
-    
+
+    <script src="js/script.js"></script>
+
 </body>
 </html>

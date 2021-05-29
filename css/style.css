@@ -3,6 +3,7 @@
     padding:0px;
     box-sizing:border-box;
     color:white;
+    overflow-x:hidden;
 }
 #grid_wrapper_main{
     display:grid;
@@ -87,6 +88,7 @@
     #title{
         grid-area: he;
         background-image:URL("../img/sand-background.jpg");
+        background-repeat:repeat-y;
         display:flex;
         align-items: center;
         justify-content: space-around;
@@ -98,6 +100,8 @@
         display:flex;
         align-items: center;
         justify-content: space-around;
+        background-image:URL("../img/sand-background.jpg");
+        background-repeat:repeat-y;
         font-size:100%;
         border:0px;
     }
@@ -114,6 +118,7 @@
         border:2px solid black;
         background-color:darkolivegreen;
         font-size:90%;
+        background-image:none;
     }
 }
 
@@ -130,7 +135,6 @@
     "na na na"
     "ma ma ma";
     background-image:URL("../img/Jungle-background.jpg");
-    background-repeat:no-repeat;
     background-size:100%;
     overflow-x:hidden;
     
@@ -179,7 +183,7 @@
     ".. p4 .. p5 .. p6 .."
     ".. .. .. .. .. .. ..";
     background-image: URL("../img/startsidabakgrund.jpg");
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-size: 100%;
     overflow-x:hidden;
 }
@@ -189,6 +193,9 @@
     flex-direction:column;
     justify-content:flex-end;
     background-image:URL("../img/sand-background.jpg");
+}
+#produkt_1 p{
+    overflow-y:hidden;
 }
 #produkt_1>img{
     object-fit:cover;
@@ -201,6 +208,9 @@
     flex-direction:column;
     justify-content:flex-end;
 }
+#produkt_2 p{
+    overflow-y:hidden;
+}
 #produkt_2>img{
     object-fit:cover;
     width:18vw;
@@ -211,6 +221,9 @@
     display:flex;
     flex-direction:column;
     justify-content:flex-end;
+}
+#produkt_3 p{
+    overflow-y:hidden;
 }
 #produkt_3>img{
     object-fit:cover;
@@ -223,6 +236,9 @@
     flex-direction:column;
     justify-content:flex-end;
 }
+#produkt_4 p{
+    overflow-y:hidden;
+}
 #produkt_4>img{
     object-fit:cover;
     width:18vw;
@@ -233,6 +249,9 @@
     display:flex;
     flex-direction:column;
     justify-content:flex-end;
+}
+#produkt_5 p{
+    overflow-y:hidden;
 }
 #produkt_5>img{
     object-fit:cover;
@@ -245,9 +264,21 @@
     flex-direction:column;
     justify-content:flex-end;
 }
+#produkt_6 p{
+    overflow-y:hidden;
+}
 #produkt_6>img{
     object-fit:cover;
     width:18vw;
+}
+.menu{
+    width:100vw;
+    height:2fr;
+    background-color:aquamarine;
+    position:fixed;
+    top:3fr;
+    transition:left 0.4s;
+    z-index:10;
 }
 @media screen and (max-width: 600px) {
 
@@ -456,7 +487,6 @@
         "na na"
         "ma ar"
         "as as";
-        
     }
     .bokning_header{
         grid-area:he;
@@ -481,6 +511,7 @@
         flex-direction:column;
         align-items:center;
         justify-content:space-around;
+        background-image:none;
     }
     .bokning_navigation{
         grid-area:na;
@@ -495,7 +526,7 @@
     .bokning_reklam{
         grid-area: as;
         position:fixed;
-        height:1vh;
+        display:none;
     }
 
 
@@ -544,6 +575,7 @@
     object-fit:cover;
     width:100%;
     height:100%;
+    overflow:hidden;
 }
 #info_navigation{
     grid-area:na;
@@ -561,18 +593,20 @@
 
     *{
         overflow:hidden;
+        
     }
     #info_grid_wrapper{
         display:grid;
         width:100vw;
         height:100vh;
+        background-image:URL("../img/info_bakgrund.jpg");
         grid-template-columns: 1fr;
         grid-template-rows: 2fr 2fr 8fr 2fr;
         grid-template-areas: 
         "he"
         "na"
         "ma"
-        "as";
+        "ma";
         background-size:100vw 30vh;
     }
     #info_header{
@@ -587,20 +621,21 @@
         grid-area:ma;
         overflow:scroll;
         overflow-x:hidden;
+        border-bottom:black 2px solid;
     }
     #info_reklam{
-        grid-area:as;
-        overflow:hidden;
-        position:absolute;
-        bottom:-57.5%
+        display:none;
     }
     #info_navigation{
         grid-area:na;
-
+        background-image:URL("../img/sand-background.jpg");
+        background-size:100vw;
         display:flex;
         align-items:center;
         justify-content:space-around;
         font-size:100%;
+        border-bottom:black 2px solid;
+        border-top:black 2px solid;        
     }
 
 }
@@ -608,154 +643,177 @@
 
 
 
-
-
-
-#kontakt_grid_wrapper{
-    display:grid;
-    height:100vh;
+.grid_wrapper{
+    height:90vh;
     width:100vw;
-    grid-template-columns: 2fr;
-    grid-template-rows:2fr 6fr 2fr;
-    grid-template-areas:
-    "he"
-    "ma"
-    "na";
-    background-image:URL("../img/jungle_big_background.jpg");
+    display:grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    grid-template-areas: 
+    "he ar ar"
+    "fo ar ar";
+    background-image:URL(../img/jungle_big_background.jpg);
+    background-size:100vw 90vh;
     background-repeat:no-repeat;
-    background-size:100%;
-    background-position:center;
 }
-#kontakt_header{
-    grid-area: he;
+.huvud{
+    grid-area:he;
     display:flex;
     flex-direction: column;
-    align-items:center;
     justify-content: space-around;
+    align-items:center;
 }
-#kontakt_header h1{
-    border:2px solid black; 
-    background-color:rgb(45, 97, 45);
+.huvud h1{
+    background-color:darkgreen;
+    border:solid 5px black;
+    color:white;
 }
-#kontakt_header b{
-    border:2px solid black; 
-    background-color:rgb(45, 97, 45);
-    width: 50%
+.huvud b{
+    background-color:darkgreen;
+    border:solid 5px black;
+    color:white;
 }
-#kontakt_main{
-    grid-area:ma;
+.bild{
+    grid-area:ar;
+
+}
+.footer{
+    grid-area:fo;
+    color:white;
     display:flex;
-    justify-content: space-between;
-}
-#kontakt_main b{
-    display:flex;
-    font-size:125%;
-    border:2px solid black;
-    background:rgb(115, 139, 70);
+    justify-content: space-evenly;
 }
 #kontakt_lista{
     display:flex;
-    position:relative;
     flex-direction: column;
-    left:25px;
-    justify-content:space-evenly;
-    font-size:112%;
-    
+    justify-content:space-between;
+    align-items:center;
+    margin:40px;
 }
 #kontakt_lista li{
-    border:2px solid black;
-    background:rgb(78, 95, 47);
+    color:white;
+    border:solid 5px black;
+    background-color:darkgreen;
+    overflow-y: hidden;
 }
-
-#kontakt_nav{
-    grid-area:na;
-    font-size:175%;
-    display:flex;
+.bodi_nav_nav {
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: space-around;
-    background-image:URL("../img/Jungle-background.jpg");
-    border:5px solid black;
+    height: 10vh;
+    background-image:URL(../img/Jungle-background.jpg);
+    border-bottom:3px solid black;
+    font-family: sans-serif;
 }
-#kontakt_nav a{
-    border:2.5px solid black;
-    background-color:grey;
-}
-@media screen and (max-width: 600px){
 
-    #kontakt_grid_wrapper{
-        display:grid;
-        height:100vh;
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 30%;
+    position: absolute;
+    right: 0px;
+    top: -90vh;
+    background-color: lightgreen;
+    justify-content: space-around;
+    align-items: center;
+    border-left:2px solid black;
+    transition:all 1s;
+}
+
+.navActive{
+    transform: translateY(100vh);
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: rgb(223, 144, 70);
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.burger div {
+    background-color: rgb(223, 144, 70);
+    height: 3px;
+    width: 25px;
+    margin: 5px;
+    border-radius: 10%;
+    transition: all 0.3s;
+    margin-right:50px;
+    cursor:pointer;
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2{
+    opacity:0;
+}
+
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+@media screen and (max-width: 728px){
+
+    .grid_wrapper{
+        height:90vh;
         width:100vw;
-        grid-template-columns: 2fr;
-        grid-template-rows:2fr 6fr 2fr;
-        grid-template-areas:
-        "he"
-        "ma"
-        "na";
-        background-image:URL("../img/jungle_big_background.jpg");
-        background-repeat:no-repeat;
-        background-size:100%;
-        background-position:center;
-        background-color:rgb(45, 97, 45);
+        display:grid;
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: 2fr 2fr;
+        grid-template-areas: 
+        "he ar ar"
+        "fo fo fo";
     }
-    #kontakt_header{
-        grid-area: he;
+    .huvud{
+        grid-area:he;
         display:flex;
         flex-direction: column;
-        align-items:center;
         justify-content: space-around;
-        border-top:5px solid black;
-        border-right:5px solid black;
-        border-left:5px solid black;
+        align-items:center;
     }
-    #kontakt_header h1{
-        background-color:rgb(45, 97, 45);
-        opacity:0%;
+    .huvud h1{
+        background-color:darkgreen;
+        border:solid 5px black;
+        color:white;
+        font-size:100%;
+        
     }
-    #kontakt_header b{
-        border: 0px;
-        border-bottom:5px solid black; 
-        background-color:rgb(45, 97, 45);
-        width:100%;
-        height:1000%;
-        font-size:75%;
-        text-overflow: scroll;
+    .huvud b{
+        background-color:darkgreen;
+        border:solid 5px black;
+        font-size:50%;
+        color:white;
     }
-    #kontakt_main{
-        grid-area:ma;
+    .bild{
+        grid-area:ar;
+    
+    }
+    .footer{
+        grid-area:fo;
+        color:white;
         display:flex;
         justify-content: space-between;
-    }
-    #kontakt_main b{
-        display:flex;
-        font-size:125%;
-        border:2px solid black;
-        background:rgb(115, 139, 70);
+        overflow-x:visible;
     }
     #kontakt_lista{
         display:flex;
-        position:relative;
         flex-direction: column;
-        left:25px;
-        justify-content:space-evenly;
-        font-size:112%;
-        
+        left:10px;
+        margin:40px;
     }
     #kontakt_lista li{
-        border:2px solid black;
-        background:rgb(78, 95, 47);
-    }
-    #kontakt_nav{
-        grid-area:na;
-        font-size:125%;
-        display:flex;
-        align-items: center;
+        color:white;
+        border:solid 5px black;
+        background-color:darkgreen;
         justify-content: space-around;
-        background-image:URL("../img/Jungle-background.jpg");
-        border:5px solid black;
     }
-    #kontakt_nav a{
-        border:2.5px solid black;
-        background-color:grey;
-    }
+
 }
